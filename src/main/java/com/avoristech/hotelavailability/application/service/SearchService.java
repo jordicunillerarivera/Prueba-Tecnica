@@ -3,8 +3,10 @@ package com.avoristech.hotelavailability.application.service;
 import com.avoristech.hotelavailability.application.port.in.SearchUseCase;
 import com.avoristech.hotelavailability.application.port.out.SearchMessagingPort;
 import com.avoristech.hotelavailability.domain.model.Search;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class SearchService implements SearchUseCase {
     private final SearchMessagingPort messagingPort;
 

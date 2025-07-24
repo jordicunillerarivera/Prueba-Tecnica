@@ -2,10 +2,13 @@ package com.avoristech.hotelavailability.infrastructure.kafka;
 
 import com.avoristech.hotelavailability.application.port.out.SearchMessagingPort;
 import com.avoristech.hotelavailability.domain.model.Search;
+import com.avoristech.hotelavailability.infrastructure.config.constants.KafkaTopics;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Component;
 
+@Component
 public class KafkaSearchMessagingAdapter implements SearchMessagingPort {
-    private static final String TOPIC = "hotel_availability_searches"; //TODO revisar literal
+    private static final String TOPIC = KafkaTopics.HOTEL_AVAILABILITY_SEARCHES;
 
     private final KafkaTemplate<String, Search> kafkaTemplate;
 

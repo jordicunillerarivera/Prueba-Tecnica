@@ -6,6 +6,8 @@ import com.avoristech.hotelavailability.application.port.in.SearchUseCase;
 import com.avoristech.hotelavailability.domain.model.HotelId;
 import com.avoristech.hotelavailability.domain.model.Search;
 import com.avoristech.hotelavailability.domain.model.SearchPeriod;
+import com.avoristech.hotelavailability.infrastructure.config.constants.ApiEndpoints;
+import com.avoristech.hotelavailability.infrastructure.config.constants.ApplicationConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import jakarta.validation.Valid;
@@ -13,7 +15,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/search")
+@RequestMapping(ApiEndpoints.SEARCH)
 public class SearchController {
     private final SearchUseCase searchUseCase;
 
@@ -21,8 +23,8 @@ public class SearchController {
         this.searchUseCase = searchUseCase;
     }
 
-    @Operation(summary = "Crea una busqueda de disponibilidad de hotel")
-    @ApiResponse(responseCode = "200", description = "ID de la busqueda generada")
+    @Operation(summary = ApplicationConstants.SEARCH_CONTROLLER_SUMMARY)
+    @ApiResponse(responseCode = ApplicationConstants.OK, description = ApplicationConstants.SEARCH_CONTROLLER_DESCRIPTION)
     @PostMapping
     @ResponseStatus(HttpStatus.OK)
     public SearchResponseDTO createSearch(@Valid @RequestBody SearchRequestDTO dto) {

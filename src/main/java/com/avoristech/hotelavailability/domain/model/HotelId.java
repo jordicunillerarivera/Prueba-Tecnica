@@ -1,5 +1,7 @@
 package com.avoristech.hotelavailability.domain.model;
 
+import com.avoristech.hotelavailability.infrastructure.config.constants.ErrorMessages;
+
 import java.util.Objects;
 
 public final class HotelId {
@@ -8,7 +10,7 @@ public final class HotelId {
     // Comprueva que value no esta vacio
     public HotelId(String value) {
         if (value == null || value.isBlank()) {
-            throw new IllegalArgumentException("hotelId no puede estar vacio");
+            throw new IllegalArgumentException(ErrorMessages.HOTELID_EMPTY);
         }
         this.value=value;
     }

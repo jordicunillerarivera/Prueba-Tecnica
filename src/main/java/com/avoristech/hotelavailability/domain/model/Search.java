@@ -1,5 +1,7 @@
 package com.avoristech.hotelavailability.domain.model;
 
+import com.avoristech.hotelavailability.infrastructure.config.constants.ErrorMessages;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +20,14 @@ public final class Search {
 
     private Search(String searchId, HotelId hotelId, SearchPeriod period, List<Integer> ages) {
         // Validacion de no null
-        Objects.requireNonNull(searchId, "searchId no puede ser null");
-        Objects.requireNonNull(hotelId, "hotelId no puede ser null");
-        Objects.requireNonNull(period, "period no puede ser null");
-        Objects.requireNonNull(ages, "ages no puede ser null");
+        Objects.requireNonNull(searchId, ErrorMessages.SEARCHID_NULL);
+        Objects.requireNonNull(hotelId, ErrorMessages.HOTELID_NULL);
+        Objects.requireNonNull(period, ErrorMessages.PERIOD_NULL);
+        Objects.requireNonNull(ages, ErrorMessages.AGES_NULL);
 
         // Validamos que haya almenos una edad
         if (ages.isEmpty()) {
-            throw new IllegalArgumentException("ages debe contener al menos una edad");
+            throw new IllegalArgumentException(ErrorMessages.AGES_EMPTY);
         }
 
         // Despues de validaciones asignamos los valores finales

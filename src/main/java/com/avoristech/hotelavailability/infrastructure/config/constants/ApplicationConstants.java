@@ -1,0 +1,14 @@
+package com.avoristech.hotelavailability.infrastructure.config.constants;
+
+public class ApplicationConstants {
+    public static final String DATE_FORMAT = "dd/MM/yyyy";
+    public static final String OK = "200";
+
+    // SearchController
+    public static final String SEARCH_CONTROLLER_SUMMARY = "Crea una busqueda de disponibilidad de hotel";
+    public static final String SEARCH_CONTROLLER_DESCRIPTION = "ID de la busqueda generada";
+
+
+
+    private ApplicationConstants(){}
+}

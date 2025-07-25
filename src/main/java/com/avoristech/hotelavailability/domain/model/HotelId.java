@@ -16,7 +16,7 @@ public final class HotelId {
     }
 
     // Devuelve el valor de value
-    public String getHotelId() {
+    public String value() {
         return value;
     }
 

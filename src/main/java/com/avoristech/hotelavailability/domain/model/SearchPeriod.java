@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 
 public final class SearchPeriod {
-    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern(ApplicationConstants.DATE_FORMAT);
+    public static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern(ApplicationConstants.DATE_FORMAT);
 
     private final LocalDate checkIn;
     private final LocalDate checkOut;

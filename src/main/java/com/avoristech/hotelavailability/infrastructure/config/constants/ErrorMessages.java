@@ -14,5 +14,7 @@ public class ErrorMessages {
     public static final String HOTELID_EMPTY = "hotelId no puede estar vacio";
     public static final String AGES_EMPTY = "ages no puede estar vacio";
 
+    public static final String SEARCHID_NOT_FOUND = "SearchId no encontrado: ";
+
     private ErrorMessages(){}
 }

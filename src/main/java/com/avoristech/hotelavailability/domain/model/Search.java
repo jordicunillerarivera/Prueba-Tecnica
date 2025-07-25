@@ -18,7 +18,7 @@ public final class Search {
         return new Search(UUID.randomUUID().toString(), hotelId, period, ages);
     }
 
-    private Search(String searchId, HotelId hotelId, SearchPeriod period, List<Integer> ages) {
+    public Search(String searchId, HotelId hotelId, SearchPeriod period, List<Integer> ages) {
         // Validacion de no null
         Objects.requireNonNull(searchId, ErrorMessages.SEARCHID_NULL);
         Objects.requireNonNull(hotelId, ErrorMessages.HOTELID_NULL);

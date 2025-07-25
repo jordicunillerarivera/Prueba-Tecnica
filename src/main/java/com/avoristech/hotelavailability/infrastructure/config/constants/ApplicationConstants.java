@@ -8,6 +8,9 @@ public class ApplicationConstants {
     public static final String SEARCH_CONTROLLER_SUMMARY = "Crea una busqueda de disponibilidad de hotel";
     public static final String SEARCH_CONTROLLER_DESCRIPTION = "ID de la busqueda generada";
 
+    // BBDD
+    public static final String COLLECTION_SEARCHES = "searches";
+
 
 
     private ApplicationConstants(){}

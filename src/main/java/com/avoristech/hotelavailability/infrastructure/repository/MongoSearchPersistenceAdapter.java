@@ -5,10 +5,12 @@ import com.avoristech.hotelavailability.domain.model.HotelId;
 import com.avoristech.hotelavailability.domain.model.Search;
 import com.avoristech.hotelavailability.domain.model.SearchPeriod;
 import com.avoristech.hotelavailability.infrastructure.config.constants.ErrorMessages;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class MongoSearchPersistenceAdapter implements SearchPersistencePort {
     private final SearchDocumentRepository repository;
 

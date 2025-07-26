@@ -10,12 +10,15 @@ import com.avoristech.hotelavailability.infrastructure.config.constants.ApiEndpo
 import com.avoristech.hotelavailability.infrastructure.config.constants.ApplicationConstants;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(ApiEndpoints.SEARCH)
+@Tag(name = ApplicationConstants.SEARCH_CONTROLLER_DOC_NAME,
+        description = ApplicationConstants.SEARCH_CONTROLLER_DOC_DESCRIPTION)
 public class SearchController {
     private final SearchUseCase searchUseCase;
 

@@ -14,7 +14,10 @@ public class ApplicationConstants {
 
     // BBDD
     public static final String COLLECTION_SEARCHES = "searches";
-
+    public static final String SEARCH_CONTROLLER_DOC_NAME = "Hotel Availability";
+    public static final String SEARCH_CONTROLLER_DOC_DESCRIPTION = "Endpoints for hotel availability search";
+    public static final String COUNT_CONTROLLER_DOC_NAME = "Hotel Count";
+    public static final String COUNT_CONTROLLER_DOC_DESCRIPTION = "Endpoints for hotel count";
 
 
     private ApplicationConstants(){}

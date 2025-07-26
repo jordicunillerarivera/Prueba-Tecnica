@@ -13,10 +13,15 @@ class SearchTest {
         HotelId hotelId = new HotelId("h-empty");
         SearchPeriod period = new SearchPeriod("01/01/2025", "03/01/2025");
 
-        IllegalArgumentException ex = assertThrows(IllegalArgumentException.class, () ->
-                Search.of(hotelId, period, List.of()));
+        Throwable exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> Search.of(hotelId, period, List.of())
+        );
 
-        assertEquals(ErrorMessages.AGES_EMPTY, ex.getMessage());
+        assertEquals(
+                ErrorMessages.AGES_EMPTY,
+                exception.getMessage()
+        );
     }
 
     @Test
@@ -129,5 +134,45 @@ class SearchTest {
                                 s2.getAges().containsAll(s1.getAges()),
                         "las listas de edades deben contener mismos elementos")
         );
+    }
+
+    @Test
+    void equals_ReturnsFalseWhenComparedWithDifferentType() {
+        Search search = Search.of(
+                new HotelId("h1"),
+                new SearchPeriod("01/01/2025", "02/01/2025"),
+                List.of(10, 20)
+        );
+        assertNotEquals("some string", search,
+                "equals debe retornar false si el objeto no es instancia de Search");
+    }
+
+    @Test
+    void equals_ReturnsTrueWhenSameReference() {
+        Search search = Search.of(
+                new HotelId("h2"),
+                new SearchPeriod("05/05/2025", "06/05/2025"),
+                List.of(5, 6)
+        );
+        assertEquals(search, search,
+                "equals debe retornar true cuando se compara la misma referencia");
+    }
+
+    @Test
+    void equals_ReturnsFalseWhenDifferentContent() {
+        Search s1 = Search.of(
+                new HotelId("h3"),
+                new SearchPeriod("10/10/2025", "12/10/2025"),
+                List.of(1, 2, 3)
+        );
+        // Cambiamos hotelId
+        Search s2 = new Search(
+                s1.getSearchId(),
+                new HotelId("other"),
+                s1.getPeriod(),
+                s1.getAges()
+        );
+        assertNotEquals(s1, s2,
+                "equals debe retornar false cuando el contenido difiere");
     }
 }

@@ -81,4 +81,34 @@ class SearchPeriodTest {
         SearchPeriod p2 = new SearchPeriod("01/01/2025", "05/01/2025");
         assertNotEquals(p1, p2);
     }
+
+    @Test
+    void equals_ReturnsFalseWhenComparedWithDifferentType() {
+        SearchPeriod period = new SearchPeriod("01/01/2025", "02/01/2025");
+        assertNotEquals("not a SearchPeriod", period,
+                "equals debe retornar false si el objeto no es instancia de SearchPeriod");
+    }
+
+    @Test
+    void equals_ReturnsTrueWhenSameReference() {
+        SearchPeriod period = new SearchPeriod("05/05/2025", "06/05/2025");
+        assertEquals(period, period,
+                "equals debe retornar true cuando se compara la misma referencia");
+    }
+
+    @Test
+    void equals_ReturnsFalseWhenDifferentDates() {
+        SearchPeriod p1 = new SearchPeriod("10/10/2025", "12/10/2025");
+        SearchPeriod p2 = new SearchPeriod("11/10/2025", "13/10/2025");
+        assertNotEquals(p1, p2,
+                "equals debe retornar false cuando las fechas difieren");
+    }
+
+    @Test
+    void equals_ReturnsTrueWhenEqualDates() {
+        SearchPeriod p1 = new SearchPeriod("15/08/2025", "18/08/2025");
+        SearchPeriod p2 = new SearchPeriod("15/08/2025", "18/08/2025");
+        assertEquals(p1, p2,
+                "equals debe retornar true cuando las fechas coinciden");
+    }
 }

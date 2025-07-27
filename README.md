@@ -47,4 +47,5 @@ Body de ejemplo:
 ## Test y reporte de cobertura
 
  - En la carpeta raiz (carpeta descomprimida), ejecutar ".mvmw clean verify".
+   - Al usar Testcontainers puede tardar un minuto.
  - El informe se creara en "target/site/jacoco/index.html".

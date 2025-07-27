@@ -42,7 +42,7 @@ Body de ejemplo:
 
 ### GET /count/{searchId}
 
- - Devuelve la cantidad de resultados para la busqueda.
+ - Devuelve la busqueda exacta y la cantidad de busquedas similares.
 
 ## Test y reporte de cobertura
 

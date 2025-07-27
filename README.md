@@ -1,8 +1,8 @@
 # Hotel Availability Service
 
-Aplicacion Spring Boot que expone una API REST para busquedas de disponibilidad hotelera.
-Usa arquitectura hexagonal y se integra con Kafka y MongoDB.
-Proyecto desarrollado como prueba tecnica.
+ - Aplicacion Spring Boot que expone una API REST para busquedas de disponibilidad hotelera.
+ - Usa arquitectura hexagonal y se integra con Kafka y MongoDB.
+ - Proyecto desarrollado como prueba tecnica.
 
 ---
 

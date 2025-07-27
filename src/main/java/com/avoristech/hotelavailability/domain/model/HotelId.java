@@ -4,20 +4,13 @@ import com.avoristech.hotelavailability.infrastructure.config.constants.ErrorMes
 
 import java.util.Objects;
 
-public final class HotelId {
-    private final String value;
-
+public record HotelId(String value) {
     // Comprueva que value no esta vacio
     public HotelId(String value) {
         if (value == null || value.isBlank()) {
             throw new IllegalArgumentException(ErrorMessages.HOTELID_EMPTY);
         }
         this.value=value;
-    }
-
-    // Devuelve el valor de value
-    public String value() {
-        return value;
     }
 
     // Compara dos value

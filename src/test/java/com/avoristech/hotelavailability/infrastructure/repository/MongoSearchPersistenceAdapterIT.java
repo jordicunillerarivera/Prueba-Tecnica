@@ -27,7 +27,7 @@ class MongoSearchPersistenceAdapterIT {
     @DynamicPropertySource
     static void setMongoProperties(DynamicPropertyRegistry registry) {
         registry.add("spring.data.mongodb.host", mongo::getHost);
-        registry.add("spring.data.mongodb.port", () -> mongo.getFirstMappedPort());
+        registry.add("spring.data.mongodb.port", mongo::getFirstMappedPort);
         registry.add("spring.data.mongodb.database", () -> "test");  // opcional: db name
     }
 

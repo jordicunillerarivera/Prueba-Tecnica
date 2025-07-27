@@ -2,17 +2,14 @@ package com.avoristech.hotelavailability.domain.model;
 
 import com.avoristech.hotelavailability.infrastructure.config.constants.ErrorMessages;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Objects;
-import java.util.UUID;
+import java.util.*;
 
-public final class Search {
-    private final String searchId;
-    private final HotelId hotelId;
-    private final SearchPeriod period;
-    private final List<Integer> ages;
-
+public record Search(
+        String searchId,
+        HotelId hotelId,
+        SearchPeriod period,
+        List<Integer> ages
+) {
     // Factory estatico para crear un search con nuevo id
     public static Search of(HotelId hotelId, SearchPeriod period, List<Integer> ages) {
         return new Search(UUID.randomUUID().toString(), hotelId, period, ages);
@@ -57,12 +54,11 @@ public final class Search {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Search)) return false;
-        Search other = (Search) o;
+        if (!(o instanceof Search other)) return false;
         return hotelId.equals(other.hotelId)
                 && period.equals(other.period)
-                && ages.containsAll(other.ages)
-                && other.ages.containsAll(ages);
+                && new HashSet<>(ages).containsAll(other.ages)
+                && new HashSet<>(other.ages).containsAll(ages);
     }
 
     @Override

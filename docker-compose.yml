@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   mongo:
-    image: mongo:6.0
+    image: mongo:7.0
     container_name: mongo
     ports:
       - "27017:27017"
@@ -31,8 +29,25 @@ services:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - avoris_net
+
+  app:
+    image: hotel-availability:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hotel-availability-app
+    depends_on:
+      - mongo
+      - kafka
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATA_MONGODB_URI: "mongodb://mongo:27017/hotel-availability-db"
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: "kafka:9092"
     networks:
       - avoris_net
 

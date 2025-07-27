@@ -4,12 +4,12 @@ spring:
 
   data:
     mongodb:
-      host: localhost
-      port: 27017
-      database: hotel-availability-db
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://localhost:27017/hotel-availability-db}
 
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    admin:
+      bootstrap-servers: kafka:9092
     consumer:
       group-id: hotel-availability-group
       auto-offset-reset: earliest
@@ -18,7 +18,6 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
     listener:
       missing-topics-fatal: false
-
 
 server:
   port: 8080

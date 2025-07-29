@@ -41,12 +41,11 @@ public final class SearchPeriod {
         return checkOut;
     }
 
-    // Compara dos objetos Searchfperiod
+    // Compara dos objetos SearchPeriod
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof SearchPeriod)) return false;
-        SearchPeriod other = (SearchPeriod) o;
+        if (!(o instanceof SearchPeriod other)) return false;
         return checkIn.equals(other.checkIn) && checkOut.equals(other.checkOut);
     }
 

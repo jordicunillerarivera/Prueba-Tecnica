@@ -31,7 +31,7 @@ public record Search(
         this.searchId = searchId;
         this.hotelId = hotelId;
         this.period = period;
-        this.ages = Collections.unmodifiableList(List.copyOf(ages));
+        this.ages = List.copyOf(ages);
     }
 
     public String getSearchId() {

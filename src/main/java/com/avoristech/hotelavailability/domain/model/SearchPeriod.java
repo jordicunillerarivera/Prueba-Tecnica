@@ -26,6 +26,11 @@ public final class SearchPeriod {
         if (!this.checkIn.isBefore(this.checkOut)) {
             throw new IllegalArgumentException(ErrorMessages.CHECKIN_OLDER_CHECKOUT);
         }
+
+        // Validacion de que checkIn no es anterior al presente
+        if (checkIn.isBefore(LocalDate.now())) {
+            throw new IllegalArgumentException("Check-in no puede ser anterior a hoy");
+        }
     }
 
     public LocalDate getCheckIn () {

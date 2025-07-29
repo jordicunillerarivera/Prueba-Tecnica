@@ -50,15 +50,13 @@ public record Search(
         return ages;
     }
 
-    // Comparamos con otro objeto Search
+    // Comparamos con otro objeto Search sin tener en cuenta la lista de edades
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Search other)) return false;
         return hotelId.equals(other.hotelId)
-                && period.equals(other.period)
-                && new HashSet<>(ages).containsAll(other.ages)
-                && new HashSet<>(other.ages).containsAll(ages);
+                && period.equals(other.period);
     }
 
     @Override

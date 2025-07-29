@@ -1,4 +1,4 @@
-package com.avoristech.hotelavailability.adapters.rest.dto;
+package com.avoristech.hotelavailability.infrastructure.adapters.rest.dto;
 
 public record CountResponseDTO(
         String searchId,

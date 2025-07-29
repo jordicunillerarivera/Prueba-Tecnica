@@ -1,6 +1,6 @@
 package com.avoristech.hotelavailability.infrastructure.repository;
 
-import com.avoristech.hotelavailability.application.port.out.SearchPersistencePort;
+import com.avoristech.hotelavailability.domain.port.SearchPersistencePort;
 import com.avoristech.hotelavailability.domain.model.HotelId;
 import com.avoristech.hotelavailability.domain.model.Search;
 import com.avoristech.hotelavailability.domain.model.SearchPeriod;

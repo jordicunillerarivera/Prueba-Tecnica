@@ -1,4 +1,4 @@
-package com.avoristech.hotelavailability.adapters.rest;
+package com.avoristech.hotelavailability.infrastructure.adapters.rest;
 
 import com.avoristech.hotelavailability.infrastructure.config.constants.ApiEndpoints;
 import com.avoristech.hotelavailability.infrastructure.config.constants.KafkaTopics;

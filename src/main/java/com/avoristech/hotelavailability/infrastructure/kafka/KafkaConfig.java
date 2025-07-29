@@ -1,6 +1,6 @@
 package com.avoristech.hotelavailability.infrastructure.kafka;
 
-import com.avoristech.hotelavailability.adapters.messaging.SearchMessageDTO;
+import com.avoristech.hotelavailability.infrastructure.adapters.messaging.SearchMessageDTO;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;

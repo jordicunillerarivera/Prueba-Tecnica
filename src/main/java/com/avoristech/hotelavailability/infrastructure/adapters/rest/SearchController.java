@@ -1,7 +1,7 @@
-package com.avoristech.hotelavailability.adapters.rest;
+package com.avoristech.hotelavailability.infrastructure.adapters.rest;
 
-import com.avoristech.hotelavailability.adapters.rest.dto.SearchRequestDTO;
-import com.avoristech.hotelavailability.adapters.rest.dto.SearchResponseDTO;
+import com.avoristech.hotelavailability.infrastructure.adapters.rest.dto.SearchRequestDTO;
+import com.avoristech.hotelavailability.infrastructure.adapters.rest.dto.SearchResponseDTO;
 import com.avoristech.hotelavailability.application.port.in.SearchUseCase;
 import com.avoristech.hotelavailability.domain.model.HotelId;
 import com.avoristech.hotelavailability.domain.model.Search;

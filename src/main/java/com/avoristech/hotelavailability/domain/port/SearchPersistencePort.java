@@ -1,4 +1,4 @@
-package com.avoristech.hotelavailability.application.port.out;
+package com.avoristech.hotelavailability.domain.port;
 
 import com.avoristech.hotelavailability.domain.model.Search;
 

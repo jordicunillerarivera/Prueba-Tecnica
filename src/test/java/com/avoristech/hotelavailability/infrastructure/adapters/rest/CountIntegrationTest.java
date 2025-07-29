@@ -1,5 +1,5 @@
 // src/test/java/com/avoristech/hotelavailability/adapters/rest/CountIntegrationTest.java
-package com.avoristech.hotelavailability.adapters.rest;
+package com.avoristech.hotelavailability.infrastructure.adapters.rest;
 
 import com.avoristech.hotelavailability.infrastructure.repository.SearchDocument;
 import com.avoristech.hotelavailability.infrastructure.repository.SearchDocumentRepository;

@@ -1,4 +1,4 @@
-package com.avoristech.hotelavailability.adapters.messaging;
+package com.avoristech.hotelavailability.infrastructure.adapters.messaging;
 
 import java.util.List;
 

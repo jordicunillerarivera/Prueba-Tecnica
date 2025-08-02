@@ -21,8 +21,8 @@ class KafkaSearchConsumerTest {
 
         String id = "testSearchId";
         String hotelId = "testHotel";
-        String checkIn = "01/01/2025";
-        String checkOut = "03/01/2025";
+        String checkIn = "01/01/2026";
+        String checkOut = "03/01/2026";
         List<Integer> ages = List.of(1,2,3);
 
         SearchMessageDTO dto = new SearchMessageDTO(id, hotelId, checkIn, checkOut, ages);

@@ -48,3 +48,4 @@ Body de ejemplo:
 
  - En la carpeta raiz (carpeta descomprimida), ejecutar "./mvmw clean verify".
  - El informe se creara en "target/site/jacoco/index.html".
+ - El deamon de docker debe estar online.

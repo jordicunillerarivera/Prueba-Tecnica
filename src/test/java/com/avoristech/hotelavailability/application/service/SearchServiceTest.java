@@ -21,7 +21,7 @@ class SearchServiceTest {
         SearchService service = new SearchService(messagingPort);
 
         HotelId hotelId = new HotelId("1234abc");
-        SearchPeriod period = new SearchPeriod("29/12/2023", "31/12/2023");
+        SearchPeriod period = new SearchPeriod("29/12/2026", "31/12/2026");
         Search search = Search.of(hotelId, period, List.of(30,29,1,3));
 
         // Acto

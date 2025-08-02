@@ -29,7 +29,7 @@ class MongoSearchPersistenceAdapterTest {
         // Arranque
         Search search = Search.of(
                 new HotelId("h1"),
-                new SearchPeriod("01/01/2025", "02/01/2025"),
+                new SearchPeriod("01/01/2026", "02/01/2026"),
                 List.of(20,30)
         );
 
@@ -53,7 +53,7 @@ class MongoSearchPersistenceAdapterTest {
         // Arranque
         Search search = Search.of(
                 new HotelId("h2"),
-                new SearchPeriod("05/05/2025", "06/05/2025"),
+                new SearchPeriod("05/05/2026", "06/05/2026"),
                 List.of(25)
         );
 
@@ -91,7 +91,7 @@ class MongoSearchPersistenceAdapterTest {
         // Arranque
         Search original = Search.of(
                 new HotelId("h3"),
-                new SearchPeriod("10/10/2025", "12/10/2025"),
+                new SearchPeriod("10/10/2026", "12/10/2026"),
                 List.of(1,2,3)
         );
 

@@ -59,8 +59,8 @@ class SearchIntegrationTest {
         String payload = """
                 {
                   "hotelId": "123abc",
-                  "checkIn": "29/12/2023",
-                  "checkOut": "31/12/2023",
+                  "checkIn": "29/12/2026",
+                  "checkOut": "31/12/2026",
                   "ages": [30,29,1,3]
                 }
                 """;

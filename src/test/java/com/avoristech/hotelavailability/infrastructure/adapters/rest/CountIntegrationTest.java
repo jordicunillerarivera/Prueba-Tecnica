@@ -44,8 +44,8 @@ class CountIntegrationTest {
     @BeforeEach
     void setup() {
         // Inserto tres documentos: dos iguales y uno distinto
-        LocalDate in  = LocalDate.of(2025, 2, 1);
-        LocalDate out = LocalDate.of(2025, 2, 3);
+        LocalDate in  = LocalDate.of(2026, 2, 1);
+        LocalDate out = LocalDate.of(2026, 2, 3);
         id = "testcount1";
         SearchDocument doc1 = new SearchDocument(id, "h1", in, out, List.of(10,20));
         SearchDocument doc2 = new SearchDocument("other1", "h1", in, out, List.of(10,20));
@@ -61,8 +61,8 @@ class CountIntegrationTest {
                 .andExpect(jsonPath("$.searchId").value(id))
                 .andExpect(jsonPath("$.count").value(3))
                 .andExpect(jsonPath("$.search.hotelId").value("h1"))
-                .andExpect(jsonPath("$.search.checkIn").value("01/02/2025"))
-                .andExpect(jsonPath("$.search.checkOut").value("03/02/2025"))
+                .andExpect(jsonPath("$.search.checkIn").value("01/02/2026"))
+                .andExpect(jsonPath("$.search.checkOut").value("03/02/2026"))
                 .andExpect(jsonPath("$.search.ages").isArray());
     }
 }

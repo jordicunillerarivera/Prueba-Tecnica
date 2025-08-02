@@ -21,7 +21,7 @@ class CountServiceTest {
 
         Search original = Search.of(
                 new HotelId("h1"),
-                new SearchPeriod("01/01/2025", "02/01/2025"),
+                new SearchPeriod("01/01/2026", "02/01/2026"),
                 List.of(10,20)
         );
         List<Search> similars = List.of(original, original);

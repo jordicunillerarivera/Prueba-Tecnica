@@ -27,6 +27,16 @@ public record Search(
             throw new IllegalArgumentException(ErrorMessages.AGES_EMPTY);
         }
 
+        for (int i = 0; i < ages.size(); i++) {
+
+        }
+
+        for (int age : ages) {
+            if (age < 0) {
+                throw new IllegalArgumentException(ErrorMessages.AGES_NEGATIVE);
+            }
+        }
+
         // Despues de validaciones asignamos los valores finales
         this.searchId = searchId;
         this.hotelId = hotelId;

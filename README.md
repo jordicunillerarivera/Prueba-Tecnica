@@ -16,7 +16,7 @@
 
 ## Levantar el entorno
 
- - Descomprimir Avoris-Prueba-Tecnica.rar si no se ha hecho ya.
+ - Descomprimir Prueba-Tecnica.rar si no se ha hecho ya.
  - Dentro de la carpeta descomprimida, ejecutar "docker-compose up -d".
    - Asegurarse de que los puertos 27017(MongoDB) y 9092(Kafka) estan libres.
 
